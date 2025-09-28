@@ -1,0 +1,43 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-image: linear-gradient(to left, #2892e9,#63a0c3);
+}
+.account{
+  display: flex;
+  justify-content: space-evenly;
+  gap:10px;
+}
+
+.examLists{
+  list-style: none;
+  color:aliceblue;
+  justify-content: space-evenly;
+  align-items: center;
+  gap:5px;flex-wrap: wrap;
+  padding:0;
+
+
+}
+.examLists li{
+  background-image: linear-gradient(to bottom,#0068a9,#4fa6e3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:100px;
+  width:150px;
+  /* flex-wrap: nowrap; */
+  
+}
+.examLists li>a{
+  text-decoration: none;
+  color:whitesmoke;
+  font-weight: 700;
+  font-size: 20px;
+}

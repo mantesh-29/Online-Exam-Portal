@@ -1,0 +1,14 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#examnotice{
+  background-image: linear-gradient(to bottom,#c3e3f0,#dfe9eb);
+  margin:1px;
+  padding:10px;
+}
+.test{
+  background-image: linear-gradient(to bottom , #4591d4,#13c4df);
+  gap:5px;
+}
