@@ -13,8 +13,8 @@
     <div class="brand">Taiyaari</div>
     <form class="search rounded bg-body-tertiary p-1 gap-1">
       <input type="search" id="search" class="border-0 search-btn" placeholder="Search Exams"/>
-      <button onclick="search()" type="search" class="rounder border-0">
-        <img src="/SOURCE FILES/search.svg" alt="Search"/>
+      <button onclick="search()" type="button" class="rounder border-0">
+        <img src="./SOURCE FILES/search.svg" alt="Search"/>
       </button>
     </form>
     <nav class="account">
@@ -24,16 +24,19 @@
   </header>
 
   <main class="container my-4">
+    <h2 class="text-center mb-4">Available UPSC Tests</h2>
     <div id="examnotice"></div>
   </main>
 
-  <footer></footer>
+  <footer class="text-center p-3 bg-light">
+    <small>&copy; 2025 Taiyaari. All rights reserved.</small>
+  </footer>
 
   <!-- Firebase SDKs -->
   <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-database.js"></script>
 
-  <!-- Your script -->
+  <!-- UPSC Script -->
   <script src="./upsc.js"></script>
 </body>
 </html>
