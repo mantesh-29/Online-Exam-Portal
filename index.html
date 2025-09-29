@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>UPSC EXAM PREPARATION</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"/>
-  <link rel="stylesheet" href="./SOURCE CODE/style.css"/>
+  <link rel="stylesheet" href="./SOURCE_CODE/style.css"/>
 </head>
 <body>
   <header class="p-2">
@@ -13,7 +13,7 @@
     <form class="search rounded bg-body-tertiary p-1 gap-1">
       <input type="search" id="search" class="border-0 search-btn" placeholder="Search Exams"/>
       <button type="button" onclick="search()" class="rounder border-0">
-        <img src="./SOURCE FILES/search.svg" alt="Search"/>
+        <img src="./SOURCE_FILES/search.svg" alt="Search"/>
       </button>
     </form>
     <nav class="account">
@@ -29,7 +29,7 @@
       <h2 class="text-center">UPSC Exams</h2>
       <ul class="examLists d-flex flex-wrap gap-3 justify-content-center pt-2">
         <li>
-          <a href="./SOURCE CODE/upsc.html" class="text-decoration-none text-center">
+          <a href="./SOURCE_CODE/upsc.html" class="text-decoration-none text-center">
             <!-- <img src="./SOURCE FILES/upsc-icon.png" alt="UPSC" width="60"/> -->
             <p>UPSC</p>
           </a>
@@ -110,7 +110,7 @@
     function examiner() {
       const password = prompt("Enter the password");
       if (password === "272829") {
-        window.location.href = "./SOURCE CODE/EXAMINER/examiner.html";
+        window.location.href = "./SOURCE_CODE/EXAMINER/examiner.html";
       } else {
         alert("Wrong password");
       }
@@ -119,7 +119,7 @@
     function search() {
       const query = document.getElementById("search").value.trim();
       if (query) {
-        window.location.href = "./SOURCE CODE/upsc.html?search=" + encodeURIComponent(query);
+        window.location.href = "./SOURCE_CODE/upsc.html?search=" + encodeURIComponent(query);
       }
     }
   </script>

@@ -2,7 +2,7 @@
 const firebaseConfig = {
   apiKey: "AIzaSyCDvi3WTREHXbIV2qVXw3sl94zXB1vCMQ4",
   authDomain: "mcq-exam-7a3e0.firebaseapp.com",
-  databaseURL: "https://mcq-exam-7a3e0-default-rtdb.firebaseio.com",
+  databaseURL: "https://mcq-exam-7a3e0-default-rtdb.firebaseio.com/",
   projectId: "mcq-exam-7a3e0",
   storageBucket: "mcq-exam-7a3e0.appspot.com",
   messagingSenderId: "561325025545",
@@ -15,13 +15,12 @@ const db = firebase.database();
 
 function showtest() {
   const examDiv = document.getElementById("examnotice");
-  examDiv.innerHTML = "";
+  examDiv.innerHTML = "<p>Loading exams...</p>";
 
-  firebase
-    .database()
-    .ref("testList")
+  db.ref("testList")
     .once("value")
     .then((snapshot) => {
+      examDiv.innerHTML = ""; // clear loading message
       if (snapshot.exists()) {
         const notice = snapshot.val();
         Object.values(notice).forEach((e) => {
@@ -67,7 +66,12 @@ function showtest() {
       } else {
         examDiv.innerHTML = "<p>No tests available.</p>";
       }
+    })
+    .catch((error) => {
+      console.error("Error fetching data:", error);
+      examDiv.innerHTML = "<p class='text-danger'>Failed to load exams.</p>";
     });
 }
 
+// Call function to display tests
 showtest();
